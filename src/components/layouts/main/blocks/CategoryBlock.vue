@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="category-block">
     <ul>
       <li v-for="(category, i) in categories" :key="i">
         <category-item
@@ -38,39 +38,48 @@ export default class CategoryBlock extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-ul {
-  padding: 0 1rem;
-  list-style-type: none;
+.category-block {
+  background-color: var(--white);
 
-  @media screen and (min-width: 600px) {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-  }
+  ul {
+    padding: 0 1rem;
+    margin: 0px;
+    list-style-type: none;
 
-  li {
-    border-bottom: 1px solid #ccc;
     @media screen and (min-width: 600px) {
-      width: 33%;
-      border: 1px solid #ccc;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
     }
 
-    &:first-child {
-      font-weight: bold;
-      font-size: 1.1rem;
-      padding-bottom: 0.5rem;
-
+    li {
+      border-bottom: 1px solid #ccc;
       @media screen and (min-width: 600px) {
-        width: 100%;
-        border: none;
-      }
-    }
-
-    &:last-child {
-      border-bottom: none;
-
-      @media screen and (min-width: 600px) {
+        width: 33%;
         border: 1px solid #ccc;
+
+        &:nth-of-type(3n + 4) {
+          width: calc(34% - 6px);
+        }
+      }
+
+      &:first-child {
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding-bottom: 0.5rem;
+
+        @media screen and (min-width: 600px) {
+          width: 100%;
+          border: none;
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+
+        @media screen and (min-width: 600px) {
+          border: 1px solid #ccc;
+        }
       }
     }
   }

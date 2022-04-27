@@ -29,6 +29,10 @@ export default {
   --grey-light: #ccc;
   --background-grey: #eee;
 }
+body {
+  background-color: var(--background-grey);
+  margin: 0px;
+}
 .container {
   display: flex;
   align-items: center;
