@@ -9,16 +9,17 @@
 </template>
 
 <script>
+import { Options, Vue } from "vue-class-component";
 import AppHeader from "@/components/layouts/main/AppHeader.vue";
 import AppFooter from "@/components/layouts/main/AppFooter.vue";
 
-export default {
-  name: "AppMain",
+@Options({
   components: {
     AppHeader,
     AppFooter,
   },
-};
+})
+export default class AppMain extends Vue {}
 </script>
 
 <style>
@@ -38,5 +39,14 @@ body {
   align-items: center;
   flex-direction: column;
   margin: 0px;
+}
+.w-full {
+  width: 100%;
+}
+.shadow {
+  box-shadow: 0 0 5px 1px #999;
+}
+.bg-white {
+  background-color: var(--white);
 }
 </style>
