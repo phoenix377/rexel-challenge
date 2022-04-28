@@ -38,14 +38,6 @@ import { productMarkets } from "@/assets/data/productMarkets";
       productMarkets,
     };
   },
-  methods: {
-    getButtons: function () {
-      this.buttons = buttons;
-    },
-  },
-  mounted: function () {
-    this.getButtons();
-  },
 })
 export default class ProductMarketButtons extends Vue {}
 </script>
