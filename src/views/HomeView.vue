@@ -4,6 +4,7 @@
   <pay-wall />
   <product-recommend />
   <page-recommend />
+  <app-banner />
 </template>
 
 <script lang="ts">
@@ -13,6 +14,7 @@ import ProductMarketButtons from "@/components/layouts/main/blocks/ProductMarket
 import PayWall from "@/components/layouts/main/blocks/PayWall.vue";
 import ProductRecommend from "@/components/layouts/main/blocks/ProductRecommend.vue";
 import PageRecommend from "@/components/layouts/main/blocks/PageRecommend.vue";
+import AppBanner from "@/components/layouts/main/blocks/AppBanner.vue";
 
 @Options({
   components: {
@@ -21,6 +23,7 @@ import PageRecommend from "@/components/layouts/main/blocks/PageRecommend.vue";
     PayWall,
     ProductRecommend,
     PageRecommend,
+    AppBanner,
   },
 })
 export default class HomeView extends Vue {}
