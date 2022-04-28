@@ -1,12 +1,13 @@
 <template>
   <div class="container">
     <div class="titles">
-      <span class="bold">Support Center</span>
+      <h2>Support Center</h2>
       <div>
-        <span class="bold">800-25-Platt</span>
+        <span>800-25-Platt</span>
         <span class="small">800-257-5288</span>
       </div>
-      <span class="bold grey">4 a.m. - 12 a.m. (pst) 7 Days a week</span>
+      <span class="bold grey">4 a.m. - 12 a.m. (pst)</span>
+      <span class="bold grey">7 Days a week</span>
     </div>
     <button class="help-button">
       <img src="@/assets/icon/black/ic_comment.png" />
@@ -28,16 +29,15 @@ export default class AppFooter extends Vue {}
 
 <style lang="scss" scoped>
 .container {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   background-color: var(--grey);
   color: var(--white);
 
   .titles {
     text-align: center;
 
-    > div,
-    > span {
-      padding: 0.2rem;
+    h2 {
+      margin: 0.5rem 0rem 1rem 0rem;
     }
   }
 
@@ -46,6 +46,7 @@ export default class AppFooter extends Vue {}
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
     display: block;
+    font-size: 1.2rem;
 
     &.bold {
       font-weight: bold;
@@ -53,6 +54,7 @@ export default class AppFooter extends Vue {}
     &.small {
       font-size: 0.8rem;
       font-weight: 300;
+      margin-bottom: 1rem;
     }
     &.grey {
       color: var(--grey-light);
@@ -60,6 +62,7 @@ export default class AppFooter extends Vue {}
   }
 
   .help-button {
+    margin: 1.5rem 0rem 1.5rem 0rem;
     padding: 0.5rem 5rem;
     border-radius: 7rem;
     display: flex;
@@ -67,6 +70,9 @@ export default class AppFooter extends Vue {}
 
     img {
       margin-right: 0.5rem;
+    }
+    span {
+      font-size: 1rem;
     }
   }
 

@@ -30,11 +30,6 @@ export default class AppBanner extends Vue {}
       background-position: right;
       background-size: cover;
     }
-
-    p {
-      font-size: 0.8rem;
-      font-weight: bold;
-    }
   }
 }
 </style>

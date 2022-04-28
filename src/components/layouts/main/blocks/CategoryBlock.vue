@@ -65,7 +65,7 @@ export default class CategoryBlock extends Vue {}
 
       &:first-child {
         font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         padding-bottom: 0.5rem;
 
         @media screen and (min-width: 600px) {

@@ -30,7 +30,7 @@ export default class AppHeader extends Vue {}
 <style lang="scss" scoped>
 .container {
   background-color: var(--green);
-  padding: 1rem;
+  padding: 0.5rem 1rem 1rem 0.5rem;
   justify-content: space-between;
 
   @media screen and (max-width: 600px) {

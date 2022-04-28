@@ -11,12 +11,12 @@
         <market-item
           v-for="(product, i) of productMarkets"
           :key="i"
-          :fullWidth="true"
           :image="product.image"
           :label="product.label"
         />
       </div>
     </div>
+    <today-deal class="today-deal-section" />
   </div>
 </template>
 
@@ -24,6 +24,7 @@
 import { Options, Vue } from "vue-class-component";
 import CircularButton from "@/components/CircularButton.vue";
 import MarketItem from "@/components/MarketItem.vue";
+import TodayDeal from "@/components/TodayDeal.vue";
 import { buttons } from "@/assets/data/productMarketButtons";
 import { productMarkets } from "@/assets/data/productMarkets";
 
@@ -31,6 +32,7 @@ import { productMarkets } from "@/assets/data/productMarkets";
   components: {
     CircularButton,
     MarketItem,
+    TodayDeal,
   },
   data() {
     return {
@@ -44,15 +46,15 @@ export default class ProductMarketButtons extends Vue {}
 
 <style lang="scss" scoped>
 .markets-section {
-  margin: 0rem 0rem 2rem 0rem;
+  margin: 0rem 0rem 1rem 0rem;
 
   .button-section {
     display: none;
 
     @media screen and (max-width: 600px) {
       display: flex;
-      justify-content: space-evenly;
-      margin: 1rem;
+      justify-content: space-around;
+      margin: 1rem 0.5rem;
     }
   }
 
@@ -66,6 +68,15 @@ export default class ProductMarketButtons extends Vue {}
     }
     @media screen and (max-width: 600px) {
       display: none;
+    }
+  }
+
+  .today-deal-section {
+    display: none;
+
+    @media (max-width: 600px) {
+      display: flex;
+      margin: 0.5rem;
     }
   }
 }

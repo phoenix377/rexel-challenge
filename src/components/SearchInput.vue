@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="search-section">
     <div class="search-input-container">
       <input
         :placeholder="placeholder"
@@ -119,17 +119,15 @@ export default class SearchInput extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.container {
+.search-section {
   width: 100%;
-  align-items: normal;
 
   .search-input-container {
     display: flex;
-    flex-direction: row;
     background-color: var(--white);
     border-radius: 0.5rem;
     align-items: center;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0rem 0rem 0rem;
 
     @media screen and (max-width: 600px) {
       margin: 1rem;

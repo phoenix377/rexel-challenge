@@ -43,6 +43,7 @@ export default class PageRecommend extends Vue {}
     margin: 0.5rem;
     padding: 0.5rem;
     text-decoration: none;
+    text-align: center;
     color: black;
 
     @media screen and (max-width: 600px) {
@@ -50,7 +51,6 @@ export default class PageRecommend extends Vue {}
     }
 
     span {
-      font-size: 0.8rem;
       font-weight: bold;
     }
   }

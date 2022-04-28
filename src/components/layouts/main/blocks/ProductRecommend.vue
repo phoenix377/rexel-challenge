@@ -1,8 +1,6 @@
 <template>
   <div class="recommend-section mx-05">
-    <div class="shadow today-deals">
-      <img src="@/assets/img/panel/deal.png" />
-    </div>
+    <today-deal class="today-deal-section" />
     <div class="shadow bg-white recent-products">
       <div class="header">
         <span>Recently Viewed</span>
@@ -22,8 +20,12 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import { recentProducts } from "@/assets/data/recentProducts";
+import TodayDeal from "@/components/TodayDeal.vue";
 
 @Options({
+  components: {
+    TodayDeal,
+  },
   data() {
     return { recentProducts };
   },
@@ -37,25 +39,22 @@ export default class ProductRecommend extends Vue {}
   flex-direction: row;
   margin: 1rem 0.5rem;
 
-  .today-deals {
-    flex: 1;
+  .today-deal-section {
+    display: block;
 
-    @media screen and (max-width: 600px) {
+    @media (max-width: 600px) {
       display: none;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
     }
   }
 
   .recent-products {
     padding: 0rem;
+    margin-left: 1rem;
     flex: 1;
 
     @media screen and (max-width: 600px) {
-      padding: 1rem 0rem;
+      padding: 0rem 0rem 1rem 0rem;
+      margin-left: 0rem;
     }
 
     .header {

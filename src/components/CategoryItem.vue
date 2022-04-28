@@ -32,8 +32,11 @@ export default class CategoryItem extends Vue {}
     }
 
     img {
-      width: 20px;
       height: 20px;
+
+      @media (max-width: 600px) {
+        width: 20px;
+      }
     }
 
     span {

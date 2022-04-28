@@ -32,7 +32,6 @@ export default class CircularButton extends Vue {}
 }
 
 span {
-  font-size: 1rem;
   margin: 0.5rem;
 }
 </style>
